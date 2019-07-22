@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_dark"
+    android:clickable="true">
+
+    <TextView
+        android:id="@+id/dashboard_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:text="MS Band Dashboard"
+        android:textColor="@android:color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"/>
+
+    <RelativeLayout
+        android:id="@+id/dashboard_count_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dashboard_title"
+        android:layout_margin="@dimen/activity_horizontal_margin">
+
+        <TextView
+            android:id="@+id/dashboard_telemetries"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/separator"
+            android:gravity="center"
+            android:text="321"
+            android:textColor="@android:color/white"
+            android:textSize="60sp"/>
+
+        <TextView
+            android:id="@+id/dashboard_telemetry_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dashboard_telemetries"
+            android:layout_toLeftOf="@+id/separator"
+            android:gravity="center"
+            android:text="@string/telemetry_label"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textSize="18dp"
+            android:textStyle="bold"/>
+
+        <View
+            android:id="@+id/separator"
+            android:layout_width="2dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/dashboard_telemetry_title"
+            android:layout_centerHorizontal="true"
+            android:background="@color/main_gray"/>
+
+        <TextView
+            android:id="@+id/dashboard_notifications"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/separator"
+            android:gravity="center"
+            android:text="0"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textSize="60sp"/>
+
+        <TextView
+            android:id="@+id/dashboard_notifications_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dashboard_notifications"
+            android:layout_toRightOf="@+id/separator"
+            android:gravity="center"
+            android:text="@string/notifications_label"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textSize="18dp"
+            android:textStyle="bold"/>
+    </RelativeLayout>
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/telemetry_dashboard_chart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main_gray_dark"
+        android:layout_below="@+id/dashboard_count_container"
+        android:layout_above="@+id/dashboard_legend_telemetry"/>
+
+    <TextView
+        android:id="@+id/dashboard_legend_telemetry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_toLeftOf="@+id/separator1"
+        android:drawablePadding="20dp"
+        android:drawableLeft="@drawable/green_gradient_rectangle"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:layout_alignParentBottom="true"
+        android:text="@string/telemetry_label"/>
+
+    <View
+        android:id="@+id/separator1"
+        android:layout_width="1dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/dashboard_legend_notifications"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_toRightOf="@+id/separator1"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:layout_alignParentBottom="true"
+        android:text="@string/notifications_label"/>
+</RelativeLayout>

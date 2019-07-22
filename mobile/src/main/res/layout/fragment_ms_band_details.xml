@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/main_white"
+                android:clickable="true">
+
+    <TextView
+        android:id="@+id/details_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:textColor="@color/main_dark"
+        android:textSize="@dimen/details_title_text_size"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/ms_band_details_device_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/details_header"
+        android:layout_below="@+id/details_header"
+        android:paddingBottom="@dimen/activity_horizontal_margin"
+        android:textColor="@color/main_dark"/>
+
+    <android.support.v7.widget.SwitchCompat
+        android:id="@+id/device_details_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/details_header"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:background="@null"/>
+
+    <View
+        android:id="@+id/separator"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_alignEnd="@+id/device_details_switch"
+        android:layout_alignLeft="@+id/details_header"
+        android:layout_below="@+id/ms_band_details_device_id"
+        android:background="@color/main_gray"/>
+
+    <TextView
+        android:id="@+id/ms_band_details_hr_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/details_header"
+        android:layout_below="@+id/separator"
+        android:paddingTop="@dimen/activity_horizontal_margin"
+        android:text="@string/device_details_heart_rate"
+        android:textAllCaps="true"
+        android:textColor="@color/main_dark"
+        android:textSize="@dimen/details_primary_label_text_size"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/ms_band_details_heart_rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ms_band_details_hr_label"
+        android:layout_below="@+id/ms_band_details_hr_label"
+        android:textColor="@color/main_green"
+        android:textSize="@dimen/details_primary_value_text_size"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/ms_band_details_heart_rate_units_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ms_band_details_heart_rate"
+        android:layout_below="@+id/ms_band_details_heart_rate"
+        android:text="bpm"
+        android:textColor="@color/main_dark"/>
+
+    <TextView
+        android:id="@+id/ms_band_details_uv_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/ms_band_details_uv"
+        android:layout_alignLeft="@+id/ms_band_details_skin_temp_label"
+        android:layout_below="@+id/ms_band_details_separator"
+        android:text="@string/ms_band_details_uv"
+        android:textColor="@color/main_dark"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/ms_band_details_uv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ms_band_details_separator"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:layout_toLeftOf="@+id/ms_band_details_uv_label"
+        android:textColor="@color/main_green"
+        android:textSize="24sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/ms_band_details_skin_temp_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/separator"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:lines="2"
+        android:text="@string/ms_band_details_skin_temp"
+        android:textColor="@color/main_dark"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/ms_band_details_skin_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ms_band_details_skin_temp_label"
+        android:layout_below="@+id/separator"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:layout_toLeftOf="@+id/ms_band_details_skin_temp_label"
+        android:gravity="center"
+        android:text="89.30"
+        android:textAllCaps="true"
+        android:textColor="@color/main_green"
+        android:textSize="24sp"
+        android:textStyle="bold"/>
+
+    <View
+        android:id="@+id/ms_band_details_separator"
+        android:layout_width="180dp"
+        android:layout_height="2dp"
+        android:layout_alignRight="@+id/ms_band_details_skin_temp_label"
+        android:layout_below="@+id/ms_band_details_skin_temp_label"
+        android:layout_marginBottom="@dimen/details_secondary_top_margin"
+        android:layout_marginTop="@dimen/details_secondary_top_margin"
+        android:background="@color/main_gray"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/ms_band_details_heart_rate_units_label"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:background="@color/main_dark">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/main_dark">
+
+            <TextView
+                android:id="@+id/ms_band_details_step_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:text="@string/device_details_total_steps"
+                android:textColor="@android:color/white"/>
+
+            <TextView
+                android:id="@+id/ms_band_details_steps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/ms_band_details_step_label"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:textColor="@android:color/white"/>
+
+            <TextView
+                android:id="@+id/ms_band_details_distance_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/ms_band_details_step_label"
+                android:layout_below="@+id/ms_band_details_step_label"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:text="@string/ms_band_details_distance"
+                android:textColor="@android:color/white"/>
+
+            <TextView
+                android:id="@+id/ms_band_details_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/ms_band_details_distance_label"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:textColor="@android:color/white"/>
+
+
+            <!--Accelerometer-->
+            <TextView
+                android:id="@+id/ms_band_details_accelerometer_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ms_band_details_distance_label"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:text="@string/device_details_accelerometer"
+                android:textColor="@android:color/white"/>
+
+            <TextView
+                android:id="@+id/ms_band_details_accelerometerX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/ms_band_details_accelerometer_label"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:text="100"
+                android:textColor="@android:color/white"/>
+
+
+            <TextView
+                android:id="@+id/ms_band_details_accelerometerY"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/ms_band_details_accelerometer_label"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:text="100"
+                android:textColor="@android:color/white"/>
+
+            <TextView
+                android:id="@+id/ms_band_details_accelerometerZ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/ms_band_details_accelerometerY"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:textColor="@android:color/white"/>
+
+            <!--Gyroscope-->
+
+            <TextView
+                android:id="@+id/ms_band_details_gyroscope_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/ms_band_details_accelerometer_label"
+                android:layout_below="@+id/ms_band_details_accelerometerZ"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:text="@string/device_details_gyroscope"
+                android:textColor="@android:color/white"/>
+
+            <TextView
+                android:id="@+id/ms_band_details_gyroscopeX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/ms_band_details_gyroscope_label"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:textColor="@android:color/white"/>
+
+            <TextView
+                android:id="@+id/ms_band_details_gyroscopeY"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/ms_band_details_gyroscope_label"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:textColor="@android:color/white"/>
+
+            <TextView
+                android:id="@+id/ms_band_details_gyroscopeZ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/ms_band_details_gyroscopeY"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:textColor="@android:color/white"/>
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

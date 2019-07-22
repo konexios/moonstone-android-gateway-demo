@@ -1,0 +1,18 @@
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_coordinator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_white"
+    android:fitsSystemWindows="false"
+    tools:context=".miramonti.list.DevicesSimbaProActivitity">
+
+    <include layout="@layout/toolbar_layout"/>
+
+    <FrameLayout
+        android:id="@+id/simba_content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"/>
+</android.support.design.widget.CoordinatorLayout>

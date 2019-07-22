@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/main_white"
+                android:clickable="true">
+
+    <TextView
+        android:id="@+id/details_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:textColor="@color/main_dark"
+        android:textSize="@dimen/details_title_text_size"
+        android:textStyle="bold"/>
+
+    <android.support.v7.widget.SwitchCompat
+        android:id="@+id/device_details_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:background="@null"/>
+
+    <TextView
+        android:id="@+id/senseability_details_device_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/details_header"
+        android:layout_below="@+id/details_header"
+        android:textColor="@android:color/white"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/senseability_details_device_id"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:background="@color/main_dark">
+
+        <TextView
+            android:id="@+id/senseability_details_temperature_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:text="@string/device_details_temperature"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/details_title_text_size"/>
+
+        <TextView
+            android:id="@+id/senseability_details_temperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/senseability_details_temperature_label"
+            android:layout_alignParentRight="true"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:text="100"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/details_title_text_size"/>
+
+        <TextView
+            android:id="@+id/senseability_details_humidity_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/senseability_details_temperature_label"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:text="@string/telemetry_param_humidity"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/details_title_text_size"/>
+
+        <TextView
+            android:id="@+id/senseability_details_humidity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/senseability_details_humidity_label"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:text="100"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/details_title_text_size"/>
+
+        <TextView
+            android:id="@+id/senseability_details_magnet_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/senseability_details_humidity_label"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:text="@string/device_details_magnet"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/details_title_text_size"/>
+
+        <TextView
+            android:id="@+id/senseability_details_magnet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/senseability_details_magnet_label"
+            android:layout_alignParentRight="true"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:text="100"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/details_title_text_size"/>
+
+        <TextView
+            android:id="@+id/senseability_details_pressure_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/senseability_details_magnet_label"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:text="@string/device_details_pressure"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/details_title_text_size"/>
+
+        <TextView
+            android:id="@+id/senseability_details_pressure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/senseability_details_pressure_label"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:text="100"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/details_title_text_size"/>
+
+        <TextView
+            android:id="@+id/senseability_details_airflow_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/senseability_details_pressure_label"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:text="@string/device_details_airflow"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/details_title_text_size"/>
+
+        <TextView
+            android:id="@+id/senseability_details_airflow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/senseability_details_airflow_label"
+            android:layout_alignParentRight="true"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:text="100"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/details_title_text_size"/>
+    </RelativeLayout>
+</RelativeLayout>

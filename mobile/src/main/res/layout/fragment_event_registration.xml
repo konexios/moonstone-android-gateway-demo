@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/main_black">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/main_black"
+                    android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/application_code_field"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="60dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/back_to_event_choice_button"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/round_red_button"
+                android:text="@string/back"
+                android:textColor="@color/main_white"
+                android:textSize="18sp"/>
+
+            <Button
+                android:id="@+id/confirm_registration_event_button"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/green_round_button"
+                android:text="@string/next"
+                android:textColor="@color/main_white"
+                android:enabled="false"
+                android:textSize="18sp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/register_error_label"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:fontFamily="sans-serif"
+            android:text="@string/account"
+            android:textColor="@color/main_white"
+            android:textSize="24sp"/>
+
+        <EditText
+            android:id="@+id/name_field_event"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView4"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/event_registration_edit_text"
+            android:ems="10"
+            android:hint="@string/name"
+            android:inputType="textPersonName"
+            android:textColor="@color/main_white"
+            android:textColorHint="@android:color/darker_gray"/>
+
+        <EditText
+            android:id="@+id/email_field_event"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/name_field_event"
+            android:layout_alignStart="@+id/name_field_event"
+            android:layout_below="@+id/name_field_event"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/event_registration_edit_text"
+            android:ems="10"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/main_white"
+            android:textColorHint="@android:color/darker_gray"/>
+
+        <EditText
+            android:id="@+id/password_field_event"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/email_field_event"
+            android:layout_alignStart="@+id/email_field_event"
+            android:layout_below="@+id/email_field_event"
+            android:layout_marginTop="19dp"
+            android:background="@drawable/event_registration_edit_text"
+            android:ems="10"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:textColor="@color/main_white"
+            android:textColorHint="@android:color/darker_gray"/>
+
+        <EditText
+            android:id="@+id/repassword_field_event"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/password_field_event"
+            android:layout_alignStart="@+id/password_field_event"
+            android:layout_below="@+id/password_field_event"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/event_registration_edit_text"
+            android:ems="10"
+            android:hint="@string/re_password"
+            android:inputType="textPassword"
+            android:textColor="@color/main_white"
+            android:textColorHint="@android:color/darker_gray"/>
+
+        <EditText
+            android:id="@+id/application_code_field"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/repassword_field_event"
+            android:layout_alignStart="@+id/repassword_field_event"
+            android:layout_below="@+id/repassword_field_event"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/event_registration_edit_text"
+            android:ems="10"
+            android:hint="@string/application_code"
+            android:inputType="textPersonName"
+            android:textColor="@color/main_white"
+            android:textColorHint="@android:color/darker_gray"/>
+
+        <TextView
+            android:id="@+id/register_error_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/name_field_event"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@+id/register_error_img"
+            android:text="@string/invalid_verify_code_label"
+            android:textColor="@color/main_white"
+            android:textSize="16sp"/>
+
+        <ImageView
+            android:id="@+id/register_error_img"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignStart="@+id/name_field_event"
+            android:layout_alignTop="@+id/register_error_label"
+            app:srcCompat="@drawable/red_alarm_point"/>
+    </RelativeLayout>
+</ScrollView>

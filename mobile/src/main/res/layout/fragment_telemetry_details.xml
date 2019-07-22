@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_dark"
+    android:clickable="true">
+
+    <TextView
+        android:id="@+id/telemetry_detail_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:text="@string/telemetry_label_upper"
+        android:textColor="@color/main_white"
+        android:textSize="@dimen/cards_title_height"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/telemetry_detail_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:lines="1"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:text="Selected"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/cards_title_height"/>
+
+    <View
+        android:id="@+id/separator"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/telemetry_detail_title"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:background="@color/main_gray"/>
+
+    <TextView
+        android:id="@+id/telemetry_detail_date_range"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/separator"
+        android:text="Date Range"
+        android:textColor="@color/main_white"
+        android:textSize="@dimen/cards_title_height"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/telemetry_detail_from"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/telemetry_detail_date_range"
+        android:layout_alignParentStart="true"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:lines="1"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:background="@color/main_gray_dark"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/cards_title_height"/>
+
+    <TextView
+        android:id="@+id/telemetry_detail_to"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/telemetry_detail_from"
+        android:layout_centerHorizontal="true"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:layout_alignParentEnd="true"
+        android:background="@color/main_gray_dark"
+        android:lines="1"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/cards_title_height"/>
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/telemetry_detail_chart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/telemetry_detail_from"/>
+
+    <ProgressBar
+        android:id="@+id/telemetry_detail_progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+</RelativeLayout>

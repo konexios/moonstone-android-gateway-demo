@@ -1,0 +1,26 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/device_list_coordinator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_dark">
+
+    <TextView
+        android:id="@+id/device_list_name_label"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/main_dark"
+        android:paddingStart="15dp"
+        android:paddingTop="5dp"
+        android:text="TextView"
+        android:textColor="@color/main_white"
+        android:textSize="18sp"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/device_list_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:paddingLeft="@dimen/main_padding_side"
+        android:paddingRight="@dimen/main_padding_side"/>
+</RelativeLayout>

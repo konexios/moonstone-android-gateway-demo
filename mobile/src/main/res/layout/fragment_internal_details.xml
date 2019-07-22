@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/main_white"
+                android:clickable="true">
+
+    <TextView
+        android:id="@+id/details_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:textColor="@color/main_dark"
+        android:textSize="@dimen/details_title_text_size"
+        android:textStyle="bold"/>
+
+    <android.support.v7.widget.SwitchCompat
+        android:id="@+id/device_details_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:background="@null"/>
+
+    <TextView
+        android:id="@+id/android_internal_details_device_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/details_header"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:textColor="@color/main_dark"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:background="@color/main_dark"
+        android:layout_below="@+id/android_internal_details_device_id"
+        android:layout_marginTop="@dimen/activity_horizontal_margin">
+
+        <LinearLayout
+            android:id="@+id/android_internal_telemetry_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"/>
+    </ScrollView>
+</RelativeLayout>

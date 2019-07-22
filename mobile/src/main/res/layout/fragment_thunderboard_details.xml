@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_white"
+    android:clickable="true">
+
+    <TextView
+        android:id="@+id/details_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:gravity="center_horizontal"
+        android:textColor="@color/main_dark"
+        android:textSize="@dimen/details_title_text_size"
+        android:textStyle="bold" />
+
+    <android.support.v7.widget.SwitchCompat
+        android:id="@+id/device_details_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:background="@null" />
+
+    <TextView
+        android:id="@+id/thunderboard_details_device_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/details_header"
+        android:layout_below="@+id/details_header"
+        android:textColor="@color/main_dark" />
+
+    <View
+        android:id="@+id/thunderboard_details_separator"
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:layout_alignLeft="@+id/details_header"
+        android:layout_alignRight="@+id/device_details_switch"
+        android:layout_below="@+id/thunderboard_details_device_id"
+        android:layout_marginTop="@dimen/details_secondary_top_margin"
+        android:background="@android:color/white" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_dark"
+        android:layout_below="@+id/thunderboard_details_separator">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/activity_horizontal_margin">
+
+            <TextView
+                android:id="@+id/thunderboard_details_temperature_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:text="@string/device_details_temperature"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/details_title_text_size" />
+
+            <TextView
+                android:id="@+id/thunderboard_details_temperature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/thunderboard_details_temperature_label"
+                android:layout_alignParentRight="true"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/details_title_text_size" />
+
+            <TextView
+                android:id="@+id/thunderboard_details_humidity_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/thunderboard_details_temperature_label"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:text="@string/telemetry_param_humidity"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/details_title_text_size" />
+
+            <TextView
+                android:id="@+id/thunderboard_details_humidity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/thunderboard_details_humidity_label"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/details_title_text_size" />
+
+            <TextView
+                android:id="@+id/thunderboard_details_uv_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/thunderboard_details_humidity_label"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:text="@string/ms_band_details_uv"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/details_title_text_size" />
+
+            <TextView
+                android:id="@+id/thunderboard_details_uv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/thunderboard_details_uv_label"
+                android:layout_alignParentRight="true"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/details_title_text_size" />
+
+            <TextView
+                android:id="@+id/thunderboard_details_light_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/thunderboard_details_uv_label"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:text="@string/telemetry_param_light"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/details_title_text_size" />
+
+            <TextView
+                android:id="@+id/thunderboard_details_light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/thunderboard_details_light_label"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/details_title_text_size" />
+
+            <!--Accelerometer-->
+            <TextView
+                android:id="@+id/thunderboard_details_accelerometer_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/thunderboard_details_light_label"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:text="@string/device_details_accelerometer"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/details_title_text_size" />
+
+            <TextView
+                android:id="@+id/thunderboard_details_accelerometerX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/thunderboard_details_accelerometer_label"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/details_title_text_size" />
+
+            <TextView
+                android:id="@+id/thunderboard_details_accelerometerY"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/thunderboard_details_accelerometer_label"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/details_title_text_size" />
+
+            <TextView
+                android:id="@+id/thunderboard_details_accelerometerZ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/thunderboard_details_accelerometerY"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/details_title_text_size" />
+
+            <!--Orientation-->
+            <TextView
+                android:id="@+id/thunderboard_details_orientation_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/thunderboard_details_accelerometerZ"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:text="@string/device_details_orientation"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/details_title_text_size" />
+
+            <TextView
+                android:id="@+id/thunderboard_details_orientationX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/thunderboard_details_orientation_label"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/details_title_text_size" />
+
+            <TextView
+                android:id="@+id/thunderboard_details_orientationY"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/thunderboard_details_orientation_label"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/details_title_text_size" />
+
+            <TextView
+                android:id="@+id/thunderboard_details_orientationZ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/thunderboard_details_orientationY"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/details_title_text_size" />
+
+            <TextView
+                android:id="@+id/thunderboard_details_led_0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/thunderboard_details_orientationZ"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:text="led 0"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/details_title_text_size"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/thunderboard_details_led_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/thunderboard_details_led_0"
+                android:layout_alignParentRight="true"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:text="led 1"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/details_title_text_size"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">@color/background_material_dark</color>
+
+    <color name="thunderboard_led0_on">#3DBFFF</color>
+    <color name="thunderboard_led1_on">#CFF703</color>
+    <color name="graph_line_color">#00a19b</color>
+
+    <color name="main_green">#00a19b</color>
+    <color name="main_green_light">#7fcfcc</color>
+    <color name="main_dark">#29272a</color>
+    <color name="main_black">#000000</color>
+    <color name="main_gray_dark">#7b7b7b</color>
+    <color name="main_gray">#bbbbbb</color>
+    <color name="main_light_gray">#dddddd</color>
+    <color name="main_white">#ffffff</color>
+    <color name="main_red">#d50000</color>
+    <color name="main_gray_light">#f5f5f5</color>
+</resources>

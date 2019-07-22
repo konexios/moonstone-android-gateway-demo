@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/main_dark"
+    android:descendantFocusability="blocksDescendants">
+
+    <ImageView
+        android:id="@+id/account_image"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_account_circle_white_24dp"
+        android:layout_centerVertical="true"
+        android:layout_margin="@dimen/activity_horizontal_margin"/>
+
+    <TextView
+        android:id="@+id/account_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/account_image"
+        android:lines="1"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:textSize="18dp"/>
+
+    <TextView
+        android:id="@+id/account_active"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:layout_centerVertical="true"
+        android:lines="1"
+        android:text="@string/title_fragment_accounts_active"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="@dimen/cards_title_height"/>
+
+    <View
+        android:id="@+id/separator"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_margin="16dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/main_black"/>
+
+</RelativeLayout>

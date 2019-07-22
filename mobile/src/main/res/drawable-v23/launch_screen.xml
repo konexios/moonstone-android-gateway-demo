@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools">
+
+
+    <item android:drawable="@color/main_black"/>
+
+    <item
+        android:top="40dp"
+        android:width="300dp"
+        android:height="120dp"
+        android:drawable="@drawable/arrow_worm_white"
+        android:gravity="top|center"
+        tools:targetApi="m"/>
+
+    <item android:bottom="40dp"
+          android:end="150dp"
+          android:width="30dp"
+          android:height="35dp"
+          android:gravity="bottom|center"
+          tools:targetApi="m">
+        <bitmap android:src="@drawable/iot_v_cmyk"/>
+    </item>
+
+    <item
+        android:bottom="40dp"
+        android:end="100dp"
+        android:gravity="bottom|center"
+        tools:targetApi="m">
+        <shape xmlns:android="http://schemas.android.com/apk/res/android"
+               android:shape="rectangle" >
+            <stroke android:width="1px" android:color="@color/main_gray"/>
+            <size android:width="2px" android:height="35dp" />
+        </shape>
+    </item>
+
+    <item
+        android:bottom="40dp"
+        android:start="60dp"
+        android:width="160dp"
+        android:height="35dp"
+        android:gravity="bottom|center"
+        tools:targetApi="m">
+        <bitmap android:src="@drawable/launch_bottom_sign"/>
+    </item>
+
+
+</layer-list>

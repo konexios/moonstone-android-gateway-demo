@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/main_black"
+                android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageView2"
+        android:layout_toEndOf="@+id/imageView2"
+        android:text="@string/already_have_an_account"
+        android:textColor="@color/main_white"
+        android:textSize="16sp"/>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="113dp"
+        app:srcCompat="@drawable/red_alarm_point"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView7"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/back_from_account_exists_screen_to_registration"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/imageView2"
+            android:layout_below="@+id/imageView2"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/round_red_button"
+            android:text="@string/back"
+            android:textColor="@color/main_white"
+            android:textSize="18sp"/>
+
+        <Button
+            android:id="@+id/sign_in_from_account_exists_screen"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/back_from_account_exists_screen_to_registration"
+            android:layout_alignBottom="@+id/back_from_account_exists_screen_to_registration"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/green_round_button"
+            android:text="@string/sign_in"
+            android:textColor="@color/main_white"
+            android:textSize="18sp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

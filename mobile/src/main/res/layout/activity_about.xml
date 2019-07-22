@@ -1,0 +1,94 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_dark"
+    tools:context=".activities.AboutActivity">
+
+    <include layout="@layout/toolbar_layout"/>
+
+    <ImageView
+        android:id="@+id/imageView_logo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:padding="30dp"
+        android:layout_below="@+id/toolbar_layout"
+        android:layout_above="@+id/logo1_container"
+        android:contentDescription="logo"
+        android:src="@drawable/iot_v_cmyk"/>
+
+    <RelativeLayout
+        android:id="@+id/logo1_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/activity_horizontal_margin"
+        android:paddingEnd="@dimen/activity_horizontal_margin"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@+id/imageView_logo1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="logo"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:paddingTop="@dimen/activity_horizontal_margin"
+            android:paddingStart="@dimen/activity_horizontal_margin"
+            android:paddingBottom="@dimen/activity_horizontal_margin"
+            android:layout_toLeftOf="@+id/separator"
+            android:src="@drawable/arrow_worm_white"/>
+
+        <View
+            android:id="@+id/separator"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/about_connect"
+            android:layout_alignBottom="@+id/about_connect"
+            android:layout_toLeftOf="@+id/about_connect"
+            android:layout_centerVertical="true"
+            android:background="@color/main_white"/>
+
+        <TextView
+            android:id="@+id/about_connect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:textSize="18sp"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:paddingStart="@dimen/activity_horizontal_margin"
+            android:paddingEnd="@dimen/activity_horizontal_margin"
+            android:layout_centerVertical="true"
+            android:textColor="@color/main_white"
+            android:text="Connect Gateway"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textView_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:layout_below="@+id/logo1_container"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:gravity="center"
+        android:lines="2"
+        android:textSize="14dp"
+        android:typeface="normal"/>
+
+    <TextView
+        android:id="@+id/textView_copyright"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_version"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/activity_about_copyright"
+        android:textColor="@android:color/white"
+        android:textSize="14dp"
+        android:typeface="normal"/>
+
+</RelativeLayout>

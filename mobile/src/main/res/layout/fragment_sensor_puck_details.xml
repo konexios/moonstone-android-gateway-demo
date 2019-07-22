@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/main_white"
+                android:clickable="true">
+
+    <TextView
+        android:id="@+id/details_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:textColor="@color/main_dark"
+        android:textSize="@dimen/details_title_text_size"
+        android:textStyle="bold"/>
+
+    <android.support.v7.widget.SwitchCompat
+        android:id="@+id/device_details_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:background="@null"/>
+
+    <TextView
+        android:id="@+id/sensor_puck_details_device_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/details_header"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:textColor="@color/main_dark"/>
+
+    <View
+        android:id="@+id/separator"
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:layout_alignLeft="@+id/details_header"
+        android:layout_alignRight="@+id/sensor_puck_details_humidity_label"
+        android:layout_below="@+id/sensor_puck_details_device_id"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:background="@color/main_gray"/>
+
+    <TextView
+        android:id="@+id/sensor_puck_details_temp_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/details_header"
+        android:layout_below="@+id/separator"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:text="@string/device_details_temperature"
+        android:textColor="@color/main_dark"
+        android:textSize="@dimen/details_primary_label_text_size"/>
+
+    <TextView
+        android:id="@+id/sensor_puck_details_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/details_header"
+        android:layout_below="@+id/sensor_puck_details_temp_label"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:textColor="@color/main_green"
+        android:textSize="@dimen/details_primary_value_text_size"/>
+
+    <TextView
+        android:id="@+id/sensor_puck_details_humidity_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_below="@+id/separator"
+        android:text="@string/telemetry_param_humidity"
+        android:textColor="@color/main_dark"
+        android:textSize="@dimen/details_primary_label_text_size"/>
+
+    <TextView
+        android:id="@+id/sensor_puck_details_humidity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/sensor_puck_details_humidity_label"
+        android:layout_below="@+id/sensor_puck_details_temp_label"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:textColor="@color/main_green"
+        android:textSize="@dimen/details_primary_value_text_size"/>
+
+    <View
+        android:id="@+id/sensor_puck_details_separator"
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:layout_alignLeft="@+id/details_header"
+        android:layout_alignRight="@+id/sensor_puck_details_humidity_label"
+        android:layout_below="@+id/sensor_puck_details_humidity"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:background="@color/main_gray"/>
+
+    <TextView
+        android:id="@+id/sensor_puck_details_light_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/sensor_puck_details_temp_label"
+        android:layout_below="@+id/sensor_puck_details_separator"
+        android:text="@string/telemetry_param_light"
+        android:textAllCaps="true"
+        android:textColor="@color/main_dark"
+        android:textSize="@dimen/details_title_text_size"/>
+
+    <TextView
+        android:id="@+id/sensor_puck_details_light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/sensor_puck_details_light_label"
+        android:layout_below="@+id/sensor_puck_details_light_label"
+        android:textAllCaps="true"
+        android:textColor="@color/main_dark"
+        android:textSize="@dimen/details_title_text_size"/>
+
+    <TextView
+        android:id="@+id/sensor_puck_details_uv_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/sensor_puck_details_humidity_label"
+        android:layout_below="@+id/sensor_puck_details_separator"
+        android:text="@string/sensor_puck_details_uv"
+        android:textAllCaps="true"
+        android:textColor="@color/main_dark"
+        android:textSize="@dimen/details_title_text_size"/>
+
+    <TextView
+        android:id="@+id/sensor_puck_details_uv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/sensor_puck_details_uv_label"
+        android:layout_below="@+id/sensor_puck_details_uv_label"
+        android:textAllCaps="true"
+        android:textColor="@color/main_dark"
+        android:textSize="@dimen/details_title_text_size"/>
+
+    <View
+        android:id="@+id/sensor_puck_details_separator_1"
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:layout_alignLeft="@+id/details_header"
+        android:layout_alignRight="@+id/sensor_puck_details_humidity_label"
+        android:layout_below="@+id/sensor_puck_details_uv"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:background="@color/main_gray"/>
+
+    <TextView
+        android:id="@+id/sensor_puck_details_heart_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sensor_puck_details_separator_1"
+        android:layout_centerHorizontal="true"
+        android:text="@string/device_details_heart_rate"
+        android:textAllCaps="true"
+        android:textColor="@color/main_dark"
+        android:textSize="@dimen/details_primary_label_text_size"/>
+
+    <TextView
+        android:id="@+id/sensor_puck_details_heart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sensor_puck_details_heart_label"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/main_green"
+        android:textSize="@dimen/details_primary_value_text_size"/>
+
+    <TextView
+        android:id="@+id/sensor_puck_details_heart_rate_units_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sensor_puck_details_heart"
+        android:layout_centerHorizontal="true"
+        android:text="bpm"
+        android:textColor="@color/main_dark"/>
+</RelativeLayout>

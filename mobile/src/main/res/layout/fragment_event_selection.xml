@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/main_black"
+                android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="@string/choose_event"
+        android:textColor="@color/main_white"
+        android:textSize="18sp"/>
+
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp">
+
+        <Spinner
+            android:id="@+id/event_selection_spinner"
+            android:layout_width="260dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:background="@color/main_white"
+            android:backgroundTint="@color/main_white"
+            android:entries="@array/events"
+            android:paddingEnd="-8dp"
+            android:paddingStart="-8dp"
+            android:theme="@style/Widget.AppCompat.DropDownItem.Spinner"/>
+
+        <ImageView
+            android:id="@+id/spinner_arrow"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="220dp"
+            android:src="@drawable/arrow_drop_down_black"/>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/frame_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/back_to_event_confirmation_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/round_red_button"
+            android:text="@string/back"
+            android:textColor="@color/main_white"
+            android:textSize="18sp"/>
+
+        <Button
+            android:id="@+id/confirm_event_choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/green_round_button"
+            android:text="@string/next"
+            android:textColor="@color/main_white"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+</RelativeLayout>

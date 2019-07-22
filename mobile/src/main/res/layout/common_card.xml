@@ -1,0 +1,67 @@
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ms_band_card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    card_view:cardBackgroundColor="@color/main_dark"
+    card_view:cardCornerRadius="@dimen/cards_corner_radius"
+    card_view:cardElevation="@dimen/cards_elevation"
+    card_view:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:paddingLeft="@dimen/activity_horizontal_margin">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="2dp">
+
+            <ImageView
+                android:id="@+id/card_online_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/card_title"
+                android:padding="2dp"
+                android:visibility="gone"
+                android:layout_alignBottom="@+id/card_title"
+                android:src="@drawable/green_dot"/>
+
+            <TextView
+                android:id="@+id/card_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cards_ms_band_title"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_toRightOf="@+id/card_online_label"
+                android:textSize="@dimen/cards_title_height"/>
+
+            <TextView
+                android:id="@+id/card_type"
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/card_title"
+                android:textColor="@android:color/white"
+                android:text="@string/cards_device_type"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/gradinet"
+            android:layout_alignParentEnd="true"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_chevron_right"/>
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

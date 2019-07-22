@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_dark">
+
+    <TextView
+        android:id="@+id/simba_ota_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="@string/simba_ota_firmwares"
+        android:textAllCaps="true"
+        android:textColor="@color/main_white"
+        android:textSize="18dp"/>
+
+    <android.support.v7.widget.AppCompatSpinner
+        android:id="@+id/simba_ota_spinner"
+        style="@style/AppTheme.Spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/simba_ota_label"
+        android:layout_margin="@dimen/activity_vertical_margin"
+        android:popupBackground="@color/background_material_dark"
+        android:spinnerMode="dropdown"/>
+
+    <Button
+        android:id="@+id/simba_ota_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/simba_ota_spinner"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/round_button"
+        android:text="@string/simba_ota_update"
+        android:textColor="@android:color/white"
+        android:textAllCaps="false"
+        android:textSize="18sp"/>
+
+    <View
+        android:id="@+id/simba_ota_separator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_margin="@dimen/activity_vertical_margin"
+        android:layout_below="@+id/simba_ota_update"
+        android:background="@color/main_white"/>
+</RelativeLayout>

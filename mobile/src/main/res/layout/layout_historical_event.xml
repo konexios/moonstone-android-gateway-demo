@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/main_dark"
+                android:descendantFocusability="blocksDescendants">
+
+    <TextView
+        android:id="@+id/historical_event_status_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/historical_event_status"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/cards_title_height"/>
+
+    <TextView
+        android:id="@+id/historical_event_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/historical_event_status_label"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/cards_title_height"/>
+
+    <TextView
+        android:id="@+id/historical_event_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/historical_event_status_label"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="@dimen/cards_title_height"/>
+
+    <TextView
+        android:id="@+id/historical_event_criteria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/historical_event_name"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="@dimen/cards_title_height"/>
+
+    <TextView
+        android:id="@+id/historical_event_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:gravity="right"
+        android:lines="2"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="@dimen/cards_title_height"/>
+
+</RelativeLayout>

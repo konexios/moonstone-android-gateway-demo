@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_actions_swiperefresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_dark">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/fragment_actions_history"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/main_white"
+            android:padding="@dimen/activity_horizontal_margin"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:text="@string/action_history"/>
+
+        <ListView
+            android:id="@+id/fragment_actions_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/fragment_actions_history"/>
+
+    </RelativeLayout>
+</android.support.v4.widget.SwipeRefreshLayout>

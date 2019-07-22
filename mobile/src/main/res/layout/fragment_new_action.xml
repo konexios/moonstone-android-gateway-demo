@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/main_dark">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/new_action_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/activity_vertical_margin"
+            android:textColor="@android:color/white"/>
+
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/new_action_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/new_action_name"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="@dimen/activity_vertical_margin"
+            android:background="@null"/>
+
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/new_action_spinner"
+            style="@style/AppTheme.Spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/new_action_switch"
+            android:layout_below="@+id/new_action_name"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:popupBackground="@color/background_material_dark"
+            android:spinnerMode="dropdown"/>
+
+        <TextView
+            android:id="@+id/new_action_description_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/new_action_spinner"
+            android:layout_margin="@dimen/activity_vertical_margin"
+            android:text="@string/action_description"
+            android:textColor="@android:color/white"/>
+
+        <EditText
+            android:id="@+id/new_action_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/new_action_description_label"
+            android:layout_marginLeft="@dimen/activity_vertical_margin"
+            android:hint="@string/action_description"
+            android:maxLines="1"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/darker_gray"/>
+
+        <View
+            android:id="@+id/new_action_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/new_action_description"
+            android:layout_margin="@dimen/activity_vertical_margin"
+            android:background="@android:color/white"/>
+
+        <TextView
+            android:id="@+id/new_action_criteria_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/new_action_divider"
+            android:layout_marginLeft="@dimen/activity_vertical_margin"
+            android:text="@string/action_criteria"
+            android:textColor="@android:color/white"/>
+
+        <EditText
+            android:id="@+id/new_action_criteria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/new_action_criteria_label"
+            android:layout_marginLeft="@dimen/activity_vertical_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:hint="@string/action_criteria"
+            android:maxLines="1"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/darker_gray"/>
+
+        <View
+            android:id="@+id/new_action_divider_1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/new_action_criteria"
+            android:layout_margin="@dimen/activity_vertical_margin"
+            android:background="@android:color/white"/>
+
+        <TextView
+            android:id="@+id/new_action_expiration_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/new_action_divider_1"
+            android:layout_marginLeft="@dimen/activity_vertical_margin"
+            android:text="@string/action_expiration"
+            android:textColor="@android:color/white"/>
+
+        <EditText
+            android:id="@+id/new_action_expiration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/new_action_expiration_label"
+            android:layout_marginLeft="@dimen/activity_vertical_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:hint="@string/action_expiration"
+            android:inputType="number"
+            android:maxLines="1"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/darker_gray"/>
+
+        <View
+            android:id="@+id/new_action_divider_2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/new_action_expiration"
+            android:layout_margin="@dimen/activity_vertical_margin"
+            android:background="@android:color/white"/>
+
+        <RelativeLayout
+            android:id="@+id/new_action_email_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/new_action_divider_2"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/new_action_email_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+                android:text="@string/action_email"
+                android:textColor="@android:color/white"/>
+
+            <EditText
+                android:id="@+id/new_action_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/new_action_email_label"
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:hint="@string/action_email"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/darker_gray"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/new_action_skype_call_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/new_action_divider_2"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/new_action_message_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+                android:text="@string/action_message"
+                android:textColor="@android:color/white"/>
+
+            <EditText
+                android:id="@+id/new_action_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/new_action_message_label"
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:hint="@string/action_message"
+                android:maxLines="1"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/darker_gray"/>
+
+            <View
+                android:id="@+id/new_action_divider_3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/new_action_message"
+                android:layout_margin="@dimen/activity_vertical_margin"
+                android:background="@android:color/white"/>
+
+            <TextView
+                android:id="@+id/new_action_phone_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/new_action_divider_3"
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+                android:text="@string/action_phone"
+                android:textColor="@android:color/white"/>
+
+            <EditText
+                android:id="@+id/new_action_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/new_action_phone_label"
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:hint="@string/action_phone"
+                android:inputType="phone"
+                android:maxLines="1"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/darker_gray"/>
+
+            <View
+                android:id="@+id/new_action_divider_4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/new_action_phone"
+                android:layout_margin="@dimen/activity_vertical_margin"
+                android:background="@android:color/white"/>
+
+            <TextView
+                android:id="@+id/new_action_sip_address_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/new_action_divider_4"
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+                android:text="@string/action_sip_address"
+                android:textColor="@android:color/white"/>
+
+            <EditText
+                android:id="@+id/new_action_sip_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/new_action_sip_address_label"
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:hint="@string/action_sip_address"
+                android:maxLines="1"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/darker_gray"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/new_action_skype_meeting_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/new_action_divider_2"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/new_action_sip_address_meeting_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+                android:text="@string/action_sip_address"
+                android:textColor="@android:color/white"/>
+
+            <EditText
+                android:id="@+id/new_action_sip_address_meeting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/new_action_sip_address_meeting_label"
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:hint="@string/action_sip_address"
+                android:maxLines="1"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/darker_gray"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/new_action_insight_alarm_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/new_action_divider_2"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/new_action_severity_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+                android:text="@string/action_severity"
+                android:textColor="@android:color/white"/>
+
+            <EditText
+                android:id="@+id/new_action_severity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/new_action_severity_label"
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:hint="1"
+                android:inputType="numberDecimal"
+                android:maxLines="1"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/darker_gray"/>
+
+            <View
+                android:id="@+id/new_action_divider_5"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/new_action_severity"
+                android:layout_margin="@dimen/activity_vertical_margin"
+                android:background="@android:color/white"/>
+
+            <TextView
+                android:id="@+id/new_action_location_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/new_action_divider_5"
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+                android:text="@string/action_location"
+                android:textColor="@android:color/white"/>
+
+            <EditText
+                android:id="@+id/new_action_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/new_action_location_label"
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:hint="@string/action_location"
+                android:maxLines="1"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/darker_gray"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/new_action_url_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/new_action_divider_2"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/new_action_url_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+                android:text="@string/action_url"
+                android:textColor="@android:color/white"/>
+
+            <EditText
+                android:id="@+id/new_action_url"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/new_action_url_label"
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:hint="@string/action_url"
+                android:maxLines="1"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/darker_gray"/>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/new_action_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_new_action_delete"
+            android:textColor="@android:color/white"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:visibility="gone"
+            android:layout_marginTop="8dp"
+            android:layout_below="@+id/new_action_url_container"
+            android:background="@null"/>
+    </RelativeLayout>
+</ScrollView>

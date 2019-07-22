@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_black">
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main_black"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+        <TextView
+            android:id="@+id/account_create_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/fragment_new_account_title"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/editTextSignInProfileName"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/account_create_title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/event_registration_edit_text"
+            android:ems="10"
+            android:hint="@string/fragment_new_account_profile_name"
+            android:inputType="text"
+            android:textColor="@drawable/color_edit_text"
+            android:textColorHint="@android:color/darker_gray"/>
+
+        <EditText
+            android:id="@+id/editTextSignInName"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/editTextSignInProfileName"
+            android:layout_below="@+id/editTextSignInProfileName"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/event_registration_edit_text"
+            android:ems="10"
+            android:hint="@string/fragment_new_account_name"
+            android:inputType="text"
+            android:textColor="@drawable/color_edit_text"
+            android:textColorHint="@android:color/darker_gray"/>
+
+        <EditText
+            android:id="@+id/editTextSignInEmail"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/editTextSignInName"
+            android:layout_below="@+id/editTextSignInName"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/event_registration_edit_text"
+            android:ems="10"
+            android:hint="@string/fragment_new_account_email"
+            android:inputType="textEmailAddress"
+            android:textColor="@drawable/color_edit_text"
+            android:textColorHint="@android:color/darker_gray"/>
+
+        <EditText
+            android:id="@+id/editTextSignInPassword"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/editTextSignInEmail"
+            android:layout_below="@+id/editTextSignInEmail"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/event_registration_edit_text"
+            android:ems="10"
+            android:hint="@string/fragment_new_account_password"
+            android:inputType="textPassword"
+            android:textColor="@drawable/color_edit_text"
+            android:textColorHint="@android:color/darker_gray"/>
+
+        <EditText
+            android:id="@+id/editTextSignInCode"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/editTextSignInPassword"
+            android:layout_below="@+id/editTextSignInPassword"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/event_registration_edit_text"
+            android:ems="10"
+            android:hint="@string/fragment_new_account_code"
+            android:inputType="text"
+            android:textColor="@drawable/color_edit_text"
+            android:textColorHint="@android:color/darker_gray"/>
+
+        <Switch
+            android:id="@+id/account_dev_mode_switch"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/editTextSignInCode"
+            android:layout_below="@+id/editTextSignInCode"
+            android:layout_marginTop="23dp"
+            android:checked="true"
+            android:onClick="onSwitched"
+            android:paddingStart="5dp"
+            android:text="Production Environment"
+            android:textColor="@color/main_white"
+            android:textSize="18sp"
+            android:visibility="visible"/>
+
+        <Button
+            android:id="@+id/button_register"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignEnd="@+id/account_dev_mode_switch"
+            android:layout_alignStart="@+id/account_dev_mode_switch"
+            android:layout_below="@+id/account_dev_mode_switch"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/green_round_button"
+            android:onClick="buttonRegisterClicked"
+            android:text="@string/fragment_new_account_button_text"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:visibility="visible"/>
+
+    </RelativeLayout>
+</ScrollView>
